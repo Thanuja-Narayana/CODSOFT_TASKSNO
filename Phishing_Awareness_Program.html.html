@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phishing Awareness Program</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1, h2 {
+            color: darkblue;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function checkQuiz() {
+            let score = 0;
+
+            if (document.getElementById("q1b").checked) score++;
+            if (document.getElementById("q2a").checked) score++;
+            if (document.getElementById("q3c").checked) score++;
+            if (document.getElementById("q4b").checked) score++;
+            if (document.getElementById("q5a").checked) score++;
+
+            document.getElementById("result").innerHTML =
+                "You scored " + score + "/5";
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>PHISHING AWARENESS PROGRAM</h1>
+
+    <div class="section">
+        <h2>What is Phishing?</h2>
+        <p>
+            Phishing is a cyber attack where criminals trick people
+            into sharing passwords, bank details or personal information.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>How to Identify Suspicious Emails</h2>
+        <ul>
+            <li>Unknown sender</li>
+            <li>Urgent messages</li>
+            <li>Spelling mistakes</li>
+            <li>Suspicious links</li>
+            <li>Unexpected attachments</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Fake Login Pages</h2>
+        <ul>
+            <li>Wrong website address</li>
+            <li>No HTTPS</li>
+            <li>Poor design</li>
+            <li>Asks for unnecessary information</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Fraudulent Websites</h2>
+        <ul>
+            <li>Very low prices</li>
+            <li>Copied logos</li>
+            <li>No contact information</li>
+            <li>Fake customer reviews</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Social Engineering Techniques</h2>
+        <ul>
+            <li>Email phishing</li>
+            <li>Smishing (SMS)</li>
+            <li>Vishing (Phone calls)</li>
+            <li>Baiting</li>
+            <li>Pretexting</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Security Tips</h2>
+        <ul>
+            <li>Check website URL</li>
+            <li>Enable Two-Factor Authentication</li>
+            <li>Never share passwords</li>
+            <li>Use antivirus software</li>
+            <li>Keep software updated</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Case Study</h2>
+        <p>
+            An employee received an email claiming to be from the bank
+            asking to verify the account. The employee clicked the link
+            and entered login details. The attackers stole the credentials.
+            Always verify emails before clicking any link.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Quiz</h2>
+
+        <p>1. Which is a phishing sign?</p>
+        <input type="radio" name="q1">
+        Known sender<br>
+        <input type="radio" id="q1b" name="q1">
+        Urgent request<br>
+
+        <p>2. Which website is safer?</p>
+        <input type="radio" id="q2a" name="q2">
+        HTTPS website<br>
+        <input type="radio" name="q2">
+        Unknown website<br>
+
+        <p>3. What should you avoid?</p>
+        <input type="radio" name="q3">
+        Strong password<br>
+        <input type="radio" name="q3">
+        Antivirus<br>
+        <input type="radio" id="q3c" name="q3">
+        Clicking suspicious links<br>
+
+        <p>4. What is Smishing?</p>
+        <input type="radio" name="q4">
+        Email attack<br>
+        <input type="radio" id="q4b" name="q4">
+        SMS phishing<br>
+
+        <p>5. Best security practice?</p>
+        <input type="radio" id="q5a" name="q5">
+        Enable Two-Factor Authentication<br>
+        <input type="radio" name="q5">
+        Share passwords<br><br>
+
+        <button onclick="checkQuiz()">Submit Quiz</button>
+
+        <h3 id="result"></h3>
+    </div>
+
+</div>
+
+</body>
+</html>
